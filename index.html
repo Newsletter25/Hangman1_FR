@@ -55,7 +55,7 @@
 
         function drawHangman(stage) {
             const hangmanStages = [
-                "\n\n\n\n\n\n========",  // 0: empty state
+                "\n\n\n\n\n\n========",  // 0: empty state (gallows)
                 "\n\n\n\n  O\n\n========",  // 1: head
                 "\n\n\n  |\n  O\n\n========",  // 2: torso
                 "\n\n /|\n  O\n\n========",  // 3: left arm
@@ -64,7 +64,19 @@
                 "\n / \\\n /|\\\n  O\n\n========",  // 6: right leg
                 "\n / \\\n /|\\\n  X\n\n========"  // 7: X eyes (game over)
             ];
-            return hangmanStages[Math.min(stage, hangmanStages.length - 1)];
+
+            // Gallows (base, post, and horizontal bar)
+            const gallows = `
+       _____
+      |     |
+      |     
+      |     
+      |     
+     _|_____
+    `;
+
+            // Return the gallows plus the hangman figure based on the stage
+            return gallows + hangmanStages[Math.min(stage, hangmanStages.length - 1)];
         }
 
         updateDisplay();
