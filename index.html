@@ -67,19 +67,6 @@
             ];
             return hangmanStages[Math.min(stage, hangmanStages.length - 1)];
         }
- // Gallows (base, post, and horizontal bar)
-            const gallows = `
-       _____
-      |     |
-      |     
-      |     
-      |     
-     _|_____
-    `;
-
-            // Return the gallows plus the hangman figure based on the stage
-            return gallows + hangmanStages[Math.min(stage, hangmanStages.length - 1)];
-        }
 
         updateDisplay();
     </script>
