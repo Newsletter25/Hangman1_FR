@@ -63,7 +63,7 @@
                 "\n\n /|\\\n  O\n\n========", // 4 right arm
                 "\n / \n /|\\\n  O\n\n========", // 5 left leg
                 "\n / \\\n /|\\\n  O\n\n========", // 6 right leg
-                "\n / \\\n /|\\\n  X\n\n========"  // 7 X eyes
+                "\n / \\\n /|\\\n  O\n /\\\n========"  // 7 hangman complete
             ];
             return hangmanStages[Math.min(stage, hangmanStages.length - 1)];
         }
