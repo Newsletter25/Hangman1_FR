@@ -58,25 +58,25 @@
             const hangmanStages = [
                 "\n\n\n\n\n\n========", // 0
                 "\n\n\n\n  O\n\n========", // 1 head
-                "\n\n\n\n   \n\n========",
-                "\n\n\n\n   \n\n========",
+                "\n\n\n\n   \n\n========"
+                "\n\n\n\n   \n\n========"
                 "\n\n\n\n  O\n  \n\n========", // 2 torso
-                "\n\n\n\n  |\n  \n\n========", 
-                "\n\n\n\n   \n  \n\n========", 
+                "\n\n\n\n  |\n  \n\n========"
+                "\n\n\n\n   \n  \n\n========"
                 "\n\n\n\n  O\n  \n\n========", // 3 left arm 
-                "\n\n\n\n /|\n  \n\n========", 
-                "\n\n\n\n   \n  \n\n========",    
+                "\n\n\n\n /|\n  \n\n========"
+                "\n\n\n\n   \n  \n\n========"   
                 "\n\n\n\n  O\n  \n\n========", // 4 right arm
-                "\n\n\n\n /|\\n \n\n========", 
-                "\n\n\n\n   \n  \n\n========",
+                "\n\n\n\n /|\\n \n\n========"
+                "\n\n\n\n   \n  \n\n========"
                 "\n\n\n\n  O\n  \n\n========", // 5 left leg
-                "\n\n\n\n /|\n  \n\n========", 
-                "\n\n\n\n / \n  \n\n========",
+                "\n\n\n\n /|\n  \n\n========"
+                "\n\n\n\n / \n  \n\n========"
                 "\n\n\n\n  O\n  \n\n========", // 6 right leg
-                "\n\n\n\n /|\n  \n\n========", 
-                "\n\n\n\n / \\n \n\n========",
+                "\n\n\n\n /|\n  \n\n========"
+                "\n\n\n\n / \\n \n\n========"
                 "\n\n\n\n  XX\n \n\n========", // 7 X eyes
-                "\n\n\n\n /|\n  \n\n========", 
+                "\n\n\n\n /|\n  \n\n========"
                 "\n\n\n\n / \\n \n\n========"
             ];
             return hangmanStages[Math.min(stage, hangmanStages.length - 1)];
