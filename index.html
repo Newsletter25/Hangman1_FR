@@ -55,15 +55,27 @@
         }
 
         function drawHangman(stage) {
-            const hangmanStages = [
-                "\n\n\n\n\n\n========", // 0
-                "\n\n\n\n  O\n\n========", // 1 head
-                "\n\n\n  |\n  O\n\n========", // 2 torso
-                "\n\n /|\n  O\n\n========", // 3 left arm
-                "\n\n /|\\\n  O\n\n========", // 4 right arm
-                "\n / \n /|\\\n  O\n\n========", // 5 left leg
-                "\n / \\\n /|\\\n  O\n\n========", // 6 right leg
-                "\n / \\\n /|\\\n  X\n\n========"  // 7 X eyes
+            const hangmanStages = [ 0: ("   ",
+                                        "   ",
+                                        "   "),
+                                    1: (" o ",
+                                        "   ",
+                                        "   "),
+                                    2: (" o ",
+                                        " |  ",
+                                        "   "),
+                                    3: (" o ",
+                                        "/|  ",
+                                        "   "),
+                                    4: (" o ",
+                                        "/|\\",
+                                        "   "),
+                                    5: (" o ",
+                                        "/|\\",
+                                        "/  "),
+                                    6: (" o ",
+                                        "/|\\",
+                                        "/ \\"),
             ];
             return hangmanStages[Math.min(stage, hangmanStages.length - 1)];
         }
