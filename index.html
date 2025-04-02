@@ -20,6 +20,7 @@
     <input type="text" id="guess-input" maxlength="1" placeholder="Enter a letter">
     <button onclick="makeGuess()">Guess</button>
     <p id="wrong-guesses"></p>
+    <p><a href="https://infozone.omega.dce-eir.net/english/r5041000/tlr/tlr09/drctrslblt-e.html" target="_blank">For more information on this topic, refer to the Directors' liability – Tax programs TSO/NVCC collections page</a></p>
     
     <script>
         const correctWord = "DUE DILIGENCE".toUpperCase();
@@ -55,17 +56,18 @@
 
         function drawHangman(stage) {
             const hangmanStages = [
-                "\n\n\n\n\n\n========",  // 0: empty state (gallows)
-                "\n\n\n\n  O\n\n========",  // 1: head
-                "\n\n\n  |\n  O\n\n========",  // 2: torso
-                "\n\n /|\n  O\n\n========",  // 3: left arm
-                "\n\n /|\\\n  O\n\n========",  // 4: right arm
-                "\n / \n /|\\\n  O\n\n========",  // 5: left leg
-                "\n / \\\n /|\\\n  O\n\n========",  // 6: right leg
-                "\n / \\\n /|\\\n  X\n\n========"  // 7: X eyes (game over)
+                "\n\n\n\n\n\n========", // 0
+                "\n\n\n\n  O\n\n========", // 1 head
+                "\n\n\n  |\n  O\n\n========", // 2 torso
+                "\n\n /|\n  O\n\n========", // 3 left arm
+                "\n\n /|\\\n  O\n\n========", // 4 right arm
+                "\n / \n /|\\\n  O\n\n========", // 5 left leg
+                "\n / \\\n /|\\\n  O\n\n========", // 6 right leg
+                "\n / \\\n /|\\\n  X\n\n========"  // 7 X eyes
             ];
-
-            // Gallows (base, post, and horizontal bar)
+            return hangmanStages[Math.min(stage, hangmanStages.length - 1)];
+        }
+ // Gallows (base, post, and horizontal bar)
             const gallows = `
        _____
       |     |
